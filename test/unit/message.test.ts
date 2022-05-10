@@ -19,6 +19,7 @@ describe('messages', () => {
                 type: RecepientType.USER,
                 id: '536e564f316c83104c000020',
             },
+            create_conversation_without_contact_reply: true,
         };
 
         nock('https://api.intercom.io')
@@ -35,6 +36,7 @@ describe('messages', () => {
             template: requestBody.template,
             from: requestBody.from,
             to: requestBody.to,
+            createConversationWithoutContactReply: requestBody.create_conversation_without_contact_reply,
         });
 
         assert.deepStrictEqual({}, response);
