@@ -125,6 +125,7 @@ describe('contacts', () => {
         const requestBody = {
             role: Role.USER,
             name: 'Roman The Bowling Fan',
+            email: 'new_email@mail.com',
             custom_attributes: {
                 callBrother: "Hey Niko, it's me – Roman. Let's go bowling!",
             },
@@ -144,6 +145,7 @@ describe('contacts', () => {
             id,
             role: requestBody.role,
             name: requestBody.name,
+            email: requestBody.email,
             customAttributes: requestBody.custom_attributes,
         });
 
